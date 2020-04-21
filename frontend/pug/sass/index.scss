@@ -1,0 +1,352 @@
+@import "vars";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 320px;
+  min-height: 320px;
+  margin: 0 auto;
+  font-family: $default-font;
+  font-weight: 400;
+  color: $p-text-color;
+}
+
+.wrap-container {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  padding-top: 69px;
+  box-sizing: border-box;
+}
+
+.main {
+  position: relative;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  color: $p-text-color;
+  font-weight: 400;
+  transition: all .7s ease;
+  &._s {
+    color: $s-text-color;
+  }
+  &:hover,
+  &:active,
+  &:focus,
+  &._active {
+    color: $p-active-color;
+    cursor: pointer;
+  }
+}
+
+._ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+h1, h2, h3, h4, h5, h6, .body0 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.body1 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+img	{
+  display: block;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.check {
+  display: none;
+  &:checked+.check-label:before {
+    background-image: url(../svg/check.svg);
+  }
+}
+.check-label {
+  position: relative;
+  padding-left: 45px;
+  &:before {
+    display: block;
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background-color: rgba(255, 255 , 255, 0.7);
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 4px;
+  }
+}
+
+.button,
+.input {
+  width: 100%;
+  max-width: 230px;
+  min-height: 44px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid transparent;
+  padding: 5px 8px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1.125rem;
+  outline: none;
+  box-sizing: border-box;
+  transition: all .7s ease;
+}
+
+.button {
+  align-items: center;
+  font-weight: 500;
+  color: $s-text-color;
+  background-color: $p-active-color;
+  border: 1px solid $p-active-color;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  &:focus, &:active, &:hover {
+    color: $p-active-color;
+    background-color: $background-color;
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+  }
+  &._s {
+    color: $p-text-color;
+    background-color: $background-color;
+    &:focus, &:active, &:hover {
+      color: $s-text-color;
+      background-color: $p-active-color;
+    }
+  }
+}
+
+.input {
+  max-width: 230px;
+  background-color: $background-color;
+  border-color: $p-active-color;
+  text-align: left;
+  &._s {
+    border-radius: 0;
+    border-color: transparent;
+    border-bottom-color: $p-active-color;
+  }
+  &:focus, &:active, &:hover {
+    border: 1px solid $b-text-color;
+    border-radius: 4px;
+  }
+  &:invalid:not(:placeholder-shown),
+  &._error {
+    background-color: rgba(255, 117, 117, 0.8);
+  }
+  &:focus + label,
+  &:valid:not(:placeholder-shown) + label {
+    right: auto;
+    font-size: 0;
+  }
+}
+
+.switch {
+  display: flex;
+  width: 290px;
+  justify-content: space-between;
+  border-radius: 5px;
+  border: 2px solid $background-color;
+  background-color: #fff;
+  box-sizing: border-box;
+  &__label {
+    display: block;
+    width: 100%;
+    max-width: 142px;
+    min-height: 40px;
+  }
+  &__button {
+    width: 100%;
+    max-width: 142px;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    padding: 5px 8px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.125rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: all .7s ease;
+    align-items: center;
+    font-weight: 500;
+    color: $p-text-color;
+    background-color: $background-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    &:focus, &:active, &:hover {
+      color: $p-active-color;
+    }
+  }
+  &__radio {
+    display: none;
+  }
+  &__radio:checked + &__button {
+    color: $s-text-color;
+    background-color: $p-active-color;
+  }
+}
+
+._p {
+  color: $p-text-color;
+}
+
+._s {
+  color: $s-text-color;
+}
+
+@import "grid";
+@import "media";
+
+@import "layout/main";
+
+.modal {
+  position:fixed;
+  z-index:100;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+
+  &,
+  &__checkbox {
+  display:none
+  }
+  &__checkbox:checked+& {
+    display:flex;
+    align-items:center;
+  }
+  &__form-box {
+    max-width:410px;
+    margin:auto;
+    background-color: $background-color;
+    border-radius: 30px;
+  }
+  &__bg {
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,.6)
+  }
+  &__close {
+    position:absolute;
+    top:15px;
+    right:15px;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background-color: $s-background-color;
+    background-image: url(../img/close.png);
+    background-repeat:no-repeat;
+    background-position:50%
+  }
+  &__label-box {
+    width: 100%;
+    max-width: 350px;
+    font-size: 12px;
+    padding: 15px 15px 23px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+}
+.swiper {
+  &-container {
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  &-slide {
+    border-radius: 8px;
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    background-color: $background-color;
+    overflow: hidden;
+    &:hover .portfolio__text,
+    &:active .portfolio__text,
+    &:focus .portfolio__text {
+      display: flex;
+    }
+  }
+  &__btn-prev,
+  &__btn-next {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    width: 32px;
+    height: 32px;
+    background-color: $s-background-color;
+    border-radius: 2px;
+    //background-image: url(../svg/slide-btn.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    outline: none;
+    cursor: pointer;
+    &:hover,
+    &:active,
+    &:focus {
+
+    }
+  }
+  &__btn-prev {
+    left: 0;
+    transform: translateY(-50%);
+  }
+  &__btn-next {
+    right: 0;
+    transform: translateY(-50%) rotate(180deg);
+  }
+  &__pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 15px 13px;
+    box-sizing: border-box;
+  }
+  &-pagination-bullet {
+    width: 24px;
+    height: 2px;
+    background-color: #c6cacf;
+    border-radius: 0;
+    opacity: 1;
+    margin: 7px 6px;
+  }
+  &-pagination-bullet-active {
+    background-color: $s-background-color;
+  }
+}
