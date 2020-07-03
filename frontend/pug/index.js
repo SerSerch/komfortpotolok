@@ -235,3 +235,9 @@ function checkPersonal(e) {
 for (let i of document.querySelectorAll('input[name=check-personal]')) {
   i.addEventListener('change', checkPersonal);
 }
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('service-worker.js')
+  });
+}

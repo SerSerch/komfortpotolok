@@ -36,8 +36,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(gif|png|jpe?g)$/,
-        exclude: /\/icons\//,
+        test: /img\/[^\.]+\.(gif|png|jpe?g)$/,
         use: [
           {
             loader: 'file-loader',
@@ -61,8 +60,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(eot|ttf|woff|woff2|svg)$/,
-        exclude: /[^\.]svg|icons\//,
+        test: /fonts\/[^\.]+\.(eot|ttf|woff|woff2|svg)$/,
         use: [
           {
             loader: 'file-loader',
@@ -74,8 +72,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.svg$/,
-        exclude: /fonts|icons/,
+        test: /svg\/[^\.]+\.svg$/,
         use: [
           {
             loader: 'file-loader',
@@ -87,7 +84,7 @@ module.exports = {
         ]
       },
       {
-        test: /\/icons\//,
+        test: /\/icons\/[^\.]+\.(svg|ico|png)$/,
         use: [
           {
             loader: 'file-loader',
