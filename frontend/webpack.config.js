@@ -37,40 +37,65 @@ module.exports = {
       },
       {
         test: /\.(gif|png|jpe?g)$/,
+        exclude: /\/icons\//,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[folder][name].[ext]',
+              outputPath: '/img',
+            }
+          },
+        ]
+      },
+      {
+        test: /manifest|browserconfig/,
         use: [
           {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'img',
+              outputPath: '/',
             }
           }
         ]
       },
       {
         test: /\.(eot|ttf|woff|woff2|svg)$/,
-        exclude: /[^\.]svg/,
+        exclude: /[^\.]svg|icons\//,
         use: [
           {
             loader: 'file-loader',
             options: {
-              name: '[name].[ext]',
-              outputPath: 'fonts',
+              name: '[hash].[ext]',
+              outputPath: '/fonts',
             }
           }
         ]
       },
       {
         test: /\.svg$/,
-        exclude: /fonts/,
+        exclude: /fonts|icons/,
         use: [
           {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'svg',
+              outputPath: '/svg',
             }
           }
+        ]
+      },
+      {
+        test: /\/icons\//,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: '/',
+            }
+          },
         ]
       },
       {
@@ -93,20 +118,9 @@ module.exports = {
     new HTMLplugin({
       template: path.resolve(__dirname, 'pug', 'pages', 'index.pug'),
       filename: 'index.html',
-      minify: false,
-    }),
-    new HTMLplugin({
-      template: path.resolve(__dirname, 'pug', 'pages', 'card.pug'),
-      filename: 'card.html',
-      minify: false,
-    }),
-    new HTMLplugin({
-      template: path.resolve(__dirname, 'pug', 'pages', 'personal.pug'),
-      filename: 'personal.html',
-      minify: false,
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
-    })
+    }),
   ],
 };

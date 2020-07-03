@@ -1,0 +1,128 @@
+.gallery {
+  padding: 50px - 15 0;
+  overflow: hidden;
+  &__item {
+    padding: 15px 0;
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+  }
+  &__caption {
+    padding-bottom: 30px;
+  }
+  &__img-box {
+    position: relative;
+    padding-top: 75%;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: transform .3s ease-in-out;
+    &._i1 {
+      background-image: url(../img/2yr/0.jpg);
+    }
+    &._i2 {
+      background-image: url(../img/bezsh/0.jpg);
+    }
+    &._i3 {
+      background-image: url(../img/contr/0.jpg);
+    }
+    &._i4 {
+      background-image: url(../img/double/0.jpg);
+    }
+    &._i5 {
+      background-image: url(../img/line/0.jpg);
+    }
+    &._i6 {
+      background-image: url(../img/par/0.jpg);
+    }
+    &._i7 {
+      background-image: url(../img/photo/0.jpg);
+    }
+    &._i8 {
+      background-image: url(../img/pk5/0.jpg);
+    }
+    &._i9 {
+      background-image: url(../img/polu/0.jpg);
+    }
+    &._i10 {
+      background-image: url(../img/ppoz/0.jpg);
+    }
+    &._i11 {
+      background-image: url(../img/ten/0.jpg);
+    }
+    &._i12 {
+      background-image: url(../img/tkan/0.jpg);
+    }
+  }
+  &__hover {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    content: 'Посмотреть';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    color: #ff5200;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: all .3s ease-in-out;
+    opacity: 0;
+  }
+  &__text {
+    padding: 15px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__item:hover {
+    color: #ff5200;
+  }
+  &__item:hover &__img {
+    transform: scale(1.1);
+  }
+  &__item:hover &__img-box {
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+  }
+  &__item:hover &__hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@media (min-width: 576px) {
+  .gallery {
+    &__item {
+      padding: 15px 4px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery {
+    padding: 70px - 15 0;
+    &__img-box {
+      &:before {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .gallery {
+    padding: 80px - 15 0;
+  }
+}
