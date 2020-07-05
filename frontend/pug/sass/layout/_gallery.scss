@@ -1,5 +1,4 @@
 .gallery {
-  padding: 50px - 15 0;
   overflow: hidden;
   &__item {
     padding: 15px 0;
@@ -112,17 +111,10 @@
 
 @media (min-width: 768px) {
   .gallery {
-    padding: 70px - 15 0;
     &__img-box {
       &:before {
         font-size: 1.5rem;
       }
     }
-  }
-}
-
-@media (min-width: 992px) {
-  .gallery {
-    padding: 80px - 15 0;
   }
 }

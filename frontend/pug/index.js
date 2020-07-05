@@ -1,7 +1,7 @@
-import 'normalize.css';
-import './swiper-bundle.min.css';
-import './fonts.css';
-import './sass/index.scss';
+// import 'normalize.css';
+// import './swiper-bundle.min.css';
+// import './fonts.css';
+// import './sass/index.scss';
 import './sass/lazy.scss';
 
 import './browserconfig.xml';

@@ -1,0 +1,11 @@
+section.callback._pbig._s
+  ._container._row
+    ._col-12._col-lg-4._col-xl-3
+      h5.callback__caption Бесплатный замерщик
+      .callback__text
+        | Sign up to our newsletter to receive the latest news.
+    form._col-12._col-lg-8._col-xl-9.callback__form(action="/mail.php" method="POST")
+      .callback__input-box._p
+        input.input.callback__input#callback-phone(name="phone" type="tel" placeholder=" " required="required")
+        label.modal__label(for="callback-phone") Ваш телефон
+      button.button.callback__button(type="submit") Заказать

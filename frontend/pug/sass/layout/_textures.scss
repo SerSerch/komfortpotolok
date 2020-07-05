@@ -1,5 +1,4 @@
 .textures {
-  padding: 50px - 15 0;
   justify-content: center;
   &__item {
     height: 100%;
@@ -60,16 +59,9 @@
 
 @media (min-width: 768px) {
   .textures {
-    padding: 70px - 15 0;
     &__text-box {
       padding: 40px;
     }
-  }
-}
-
-@media (min-width: 992px) {
-  .textures {
-    padding: 80px - 15 0;
   }
 }
 

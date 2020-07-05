@@ -1,5 +1,4 @@
 .duration {
-  padding: 50px - 15 0;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/slide2.jpg');
   background-attachment: fixed;
   background-size: cover;
@@ -11,17 +10,5 @@
   &__text {
     font-size: 1.125rem;
     font-weight: 300;
-  }
-}
-
-@media (min-width: 768px) {
-  .duration {
-    padding: 70px - 15 0;
-  }
-}
-
-@media (min-width: 992px) {
-  .duration {
-    padding: 80px - 15 0;
   }
 }

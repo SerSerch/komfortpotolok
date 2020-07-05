@@ -31,3 +31,27 @@
     transition: opacity .3s ease 0.5s;
   }
 }
+
+@media (min-width: 576px) {
+  .header {
+    &__parallax-bg {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/slide1_x2.jpg');
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    &__parallax-bg {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/slide1_x3.jpg');
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .header {
+    &__parallax-bg {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/slide1_x4.jpg');
+    }
+  }
+}

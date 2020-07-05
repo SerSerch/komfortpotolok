@@ -166,6 +166,7 @@ video {
 .input {
   background-color: rgba(255, 255, 255, 0.15);
   border: 1px solid $p-active-color;
+  font-weight: 700;
   &._s {
     color: $background-color;
     border-color: $background-color;
@@ -501,6 +502,10 @@ video {
 
 .lazy-bg {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+._pbig {
+  padding: 50px - 15 0;
 }
 
 @import "layout/main";
