@@ -1,7 +1,7 @@
-// import 'normalize.css';
-// import './swiper-bundle.min.css';
-// import './fonts.css';
-// import './sass/index.scss';
+import 'normalize.css';
+import './swiper-bundle.min.css';
+import './fonts.css';
+import './sass/index.scss';
 import './sass/lazy.scss';
 
 import './browserconfig.xml';
@@ -25,6 +25,9 @@ import './icons/apple-touch-icon-120x120.png';
 import './icons/apple-touch-icon-144x144.png';
 import './icons/apple-touch-icon-152x152.png';
 import './icons/apple-touch-icon.png';
+import './icons/maskable_icon.png';
+
+document.oncontextmenu = () => false;
 
 const Swiper = require('./swiper-bundle.min.js');
 

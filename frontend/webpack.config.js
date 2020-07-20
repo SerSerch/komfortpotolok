@@ -36,7 +36,8 @@ module.exports = {
         ],
       },
       {
-        test: /img\/[^\.]+\.(gif|png|jpe?g)$/,
+        test: /\.(gif|png|jpe?g)$/,
+        exclude: /fonts|icons/,
         use: [
           {
             loader: 'file-loader',
@@ -45,6 +46,31 @@ module.exports = {
               outputPath: '/img',
             }
           },
+        ]
+      },
+      {
+        test: /icons[^\.]+\.(svg|ico|png)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: '/',
+            }
+          },
+        ]
+      },
+      {
+        test: /\.svg$/,
+        exclude: /icons/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: '/svg',
+            }
+          }
         ]
       },
       {
@@ -60,7 +86,7 @@ module.exports = {
         ]
       },
       {
-        test: /fonts\/[^\.]+\.(eot|ttf|woff|woff2|svg)$/,
+        test: /fonts[^\.]+\.(eot|ttf|woff|woff2|svg)$/,
         use: [
           {
             loader: 'file-loader',
@@ -69,30 +95,6 @@ module.exports = {
               outputPath: '/fonts',
             }
           }
-        ]
-      },
-      {
-        test: /svg\/[^\.]+\.svg$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: '/svg',
-            }
-          }
-        ]
-      },
-      {
-        test: /\/icons\/[^\.]+\.(svg|ico|png)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: '/',
-            }
-          },
         ]
       },
       {

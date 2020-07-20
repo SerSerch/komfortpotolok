@@ -5,8 +5,8 @@
   "scope": "https://komfortpotolok.ru/",
   "lang": "ru-RU",
   "display": "standalone",
-  "theme_color": "#fee25f",
-  "background_color": "#fee25f",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
   "orientation": "any",
   "icons": [
     {
@@ -59,6 +59,12 @@
      "sizes": "192x192",
      "type": "image\/png",
      "density": "4.0"
+    },
+    {
+      "src": "\/maskable_icon.png",
+      "sizes": "196x196",
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "\/android-icon-512x512.png",
