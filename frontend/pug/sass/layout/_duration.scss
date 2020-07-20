@@ -1,0 +1,14 @@
+.duration {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/slide2.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  &__text,
+  &__button-box {
+    padding: 15px 0;
+  }
+  &__text {
+    font-size: 1.125rem;
+    font-weight: 300;
+  }
+}

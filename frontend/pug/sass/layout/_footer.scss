@@ -1,0 +1,61 @@
+.footer {
+  background-color: #151515;
+  text-align: center;
+  &,
+  &__pol {
+    color: #ffffff;
+  }
+  &__col {
+    text-align: left;
+  }
+  &__title {
+    padding: 50px 15px 25px;
+    font-size: 1.125rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    border-bottom: 1px solid #ebebeb;
+  }
+  &__menu-list {
+    display: flex;
+    padding:  25px - 15 0 50px - 15;
+    margin: 0;
+    list-style: none;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  &__link {
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #fff;
+  }
+  &__map-box {
+    position: relative;
+    min-height: 350px;
+  }
+  &__map {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 25px 15px;
+    box-sizing: border-box;
+    &:before {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-image: url(../img/map.jpg);
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      background-size: cover;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    &__col {
+      border-right: 1px solid #ebebeb;
+    }
+  }
+}

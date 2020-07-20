@@ -1,0 +1,74 @@
+.textures {
+  justify-content: center;
+  &__item {
+    height: 100%;
+    max-width: 530px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+  }
+  &__image {
+    padding-top: 62.16%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    &._i1 {
+      background-image: url(../img/textures1.jpg);
+    }
+    &._i2 {
+      background-image: url(../img/textures2.jpg);
+    }
+    &._i3 {
+      background-image: url(../img/textures3.jpg);
+    }
+    &._i4 {
+      background-image: url(../img/textures4.jpg);
+    }
+    &._i5 {
+      background-image: url(../img/textures5.jpg);
+    }
+  }
+  &__text-box {
+    position: relative;
+    padding: 30px 15px;
+    &:before {
+      display: block;
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #fff;
+      transform-origin: top left;
+      transform: skewY(-6deg);
+    }
+  }
+  &__title {
+    position: relative;
+    z-index: 1;
+  }
+  &__text {
+    position: relative;
+    z-index: 1;
+    padding-top: 15px;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 768px) {
+  .textures {
+    &__text-box {
+      padding: 40px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .textures {
+    &__text-box {
+      padding: 40px 60px;
+    }
+  }
+}
